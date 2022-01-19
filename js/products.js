@@ -6,11 +6,11 @@ createApp({
       url: 'https://vue3-course-api.hexschool.io/v2',
       path: 'charlotte-hexschool',
       products: [],
-      tempProduct: {},
+      temp: {},
     }
   },
   methods: {
-    checkAdmin() {
+    checkApi() {
       const url = `${this.url}/api/user/check`;
       axios.post(url)
         .then(() => {
@@ -36,7 +36,7 @@ createApp({
 
     //展開單一產品
     showProduct(item) {
-      this.tempProduct = item;
+      this.temp = item;
     }
   },
 
@@ -47,6 +47,6 @@ createApp({
     axios.defaults.headers.common.Authorization = token;
     
     //執行驗證登入Token
-    this.checkAdmin()
+    this.checkApi()
   }
 }).mount('#app');

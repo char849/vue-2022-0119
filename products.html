@@ -71,9 +71,9 @@
         </div>
         <div class="col-md-6">
           <h2>單一產品細節</h2>
-          <template v-if="tempProduct.title">
+          <template v-if="temp.title">
             <div class="card mb-3">
-              <img :src="tempProduct.imageUrl" class="card-img-top primary-image" alt="主圖">
+              <img :src="temp.imageUrl" class="card-img-top primary-image" alt="主圖">
               <div class="card-body">
                 <h5 class="card-title">
                   {{ tempProduct.title }}
@@ -88,7 +88,7 @@
                 </div>
               </div>
             </div>
-            <template v-for="(image, id) in tempProduct.imagesUrl" :key="id">
+            <template v-for="(image, id) in temp.imagesUrl" :key="id">
               <img v-if="image" :src="image" :alt="`多圖 ${id+1}`" class="images m-2">
             </template>
           </template>
