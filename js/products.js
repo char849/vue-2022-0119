@@ -47,7 +47,8 @@ createApp({
         const index = this.products.finIndex(obj => obj.id === item.id);
         this.products.splice(index, 1);
         this.getData();  
-        this.temp = {};      
+        this.temp = {}; 
+        alert('刪除成功');     
       })
       //失敗結果
       .catch((error) => {
@@ -64,7 +65,6 @@ createApp({
     axios.defaults.headers.common.Authorization = token;
     
     //執行驗證登入Token   
-    this.checkApi(); 
-    this.getData();   
+    this.checkApi();        
   }
 }).mount('#app');
