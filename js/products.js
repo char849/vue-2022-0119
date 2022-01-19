@@ -40,18 +40,18 @@ createApp({
     },
     //刪除一個產品
     removeProduct(item) {    
-      const id = item.id; 
+      const id = item.target.dataset.id; 
       const url = `${this.url}/api/${this.path}/admin/product/${id}`;         
       axios.delete(url)
       .then((res) => {
         const index = this.products.finIndex(obj => obj.id === item.id);
         this.products.splice(index, 1);        
-        this.getData();  
+        this.getData();        
         this.temp = {};           
       })
       //失敗結果
       .catch((error) => {
-        this.getData();        
+        console.dir(err);        
       })
     }
     
