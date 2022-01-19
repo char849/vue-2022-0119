@@ -46,9 +46,9 @@ createApp({
       .then((res) => {
         const index = this.products.finIndex(obj => obj.id === item.id);
         this.products.splice(index, 1);
+        alert('刪除成功');
         this.getData();  
-        this.temp = {}; 
-        alert('刪除成功');     
+        this.temp = {};              
       })
       //失敗結果
       .catch((error) => {
