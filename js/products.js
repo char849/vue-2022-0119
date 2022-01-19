@@ -48,7 +48,7 @@ createApp({
         this.products.splice(index, 1);
         alert('刪除成功');
         this.getData();  
-        this.temp = {};              
+        this.temp = {};           
       })
       //失敗結果
       .catch((error) => {
