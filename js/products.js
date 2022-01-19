@@ -43,9 +43,7 @@ createApp({
       const id = e.target.dataset.id; 
       const url = `${this.url}/api/${this.path}/admin/product/${id}`;         
       axios.delete(url)
-      .then((res) => {
-        // const index = this.products.finIndex(obj => obj.id === item.id);
-        // this.products.splice(index, 1);        
+      .then((res) => {             
         this.getData();        
         this.temp = {};           
       })
