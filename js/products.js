@@ -45,8 +45,7 @@ createApp({
       axios.delete(url)
       .then((res) => {
         const index = this.products.finIndex(obj => obj.id === item.id);
-        this.products.splice(index, 1);
-        alert('刪除成功');
+        this.products.splice(index, 1);        
         this.getData();  
         this.temp = {};           
       })
