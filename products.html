@@ -45,6 +45,9 @@
                   是否啟用
                 </th>
                 <th width="120">
+                  刪除產品
+                </th>
+                <th width="120">
                   查看細節
                 </th>
               </tr>
@@ -58,8 +61,11 @@
                 <td width="120">
                   {{ item.price }}
                 </td>
-                <td width="150">
+                <td width="120">                  
                   <button type="button" class="btn" :class="{'btn-success': item.is_enabled, 'btn-light': !item.is_enabled }" @click="item.is_enabled = !item.is_enabled" >{{ item.is_enabled ? '啟用' : '未啟用' }}</button>
+                </td>                
+                <td width="120">
+                  <button type="button" class="btn btn-outline-danger move deleteBtn" data-action="remove" @click="removeProduct(item)"> 刪除 </button>                  
                 </td>
                 <td width="120">
                   <button type="button" class="btn btn-primary" @click="showProduct(item)">查看細節</button>

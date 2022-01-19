@@ -37,16 +37,33 @@ createApp({
     //展開單一產品
     showProduct(item) {
       this.temp = item;
+    },
+    //刪除一個產品    
+    removeProduct(item) {    
+      const id = item.id; 
+      const url = `${this.url}/api/${this.path}/admin/product/${id}`;         
+      axios.delete(url)
+      .then((res) => {
+        const index = this.products.finIndex(obj => obj.id === item.id);
+        this.products.splice(index, 1);
+        alert('刪除成功');
+        this.getData();        
+      })
+      //失敗結果
+      .catch((error) => {
+        alert('刪除失敗');
+      })
     }
+    
   },
-
+  
   //初使化
   mounted() {
     // 取出 Token
     const token = document.cookie.replace(/(?:(?:^|.*;\s*)hexToken\s*=\s*([^;]*).*$)|^.*$/, '$1');
     axios.defaults.headers.common.Authorization = token;
     
-    //執行驗證登入Token
-    this.checkApi()
+    //執行驗證登入Token   
+    this.checkApi();     
   }
 }).mount('#app');
