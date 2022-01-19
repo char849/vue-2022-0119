@@ -18,8 +18,7 @@ createApp({
           //取出token
           const { token, expired } = res.data;
           // 儲存登入的cookie token資訊
-          // expires 設置有效時間
-          //document.cookie = `hexToken=${token};expires=${new Date(expired)}; path=/`;
+          // expires 設置有效時間          
           document.cookie = `hexToken=${token};expires=${new Date(expired)};`;
           //轉址的動作          
           window.location = 'products.html';
