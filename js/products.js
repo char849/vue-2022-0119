@@ -64,6 +64,7 @@ createApp({
     axios.defaults.headers.common.Authorization = token;
     
     //執行驗證登入Token   
-    this.checkApi();     
+    this.checkApi(); 
+    this.getData();   
   }
 }).mount('#app');
