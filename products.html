@@ -76,15 +76,15 @@
               <img :src="temp.imageUrl" class="card-img-top primary-image" alt="主圖">
               <div class="card-body">
                 <h5 class="card-title">
-                  {{ tempProduct.title }}
-                  <span class="badge bg-primary ms-2">{{ tempProduct.category }}</span>
+                  {{ temp.title }}
+                  <span class="badge bg-primary ms-2">{{ temp.category }}</span>
                 </h5>
-                <p class="card-text">商品描述：{{ tempProduct.description }}</p>
-                <p class="card-text">商品內容：{{ tempProduct.content }}</p>
+                <p class="card-text">商品描述：{{ temp.description }}</p>
+                <p class="card-text">商品內容：{{ temp.content }}</p>
                 <div class="d-flex">
-                  <p class="card-text me-2">{{ tempProduct.price }}</p>
-                  <p class="card-text text-secondary"><del>{{ tempProduct.origin_price }}</del></p>
-                  {{ tempProduct.unit }} / 元
+                  <p class="card-text me-2">{{ temp.price }}</p>
+                  <p class="card-text text-secondary"><del>{{ temp.origin_price }}</del></p>
+                  {{ temp.unit }} / 元
                 </div>
               </div>
             </div>
