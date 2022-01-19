@@ -38,7 +38,7 @@ createApp({
     showProduct(item) {
       this.temp = item;
     },
-    //刪除一個產品    
+    //刪除一個產品    d
     removeProduct(item) {    
       const id = item.id; 
       const url = `${this.url}/api/${this.path}/admin/product/${id}`;         
@@ -46,8 +46,7 @@ createApp({
       .then((res) => {
         const index = this.products.finIndex(obj => obj.id === item.id);
         this.products.splice(index, 1);
-        this.getData();         
-        alert('刪除成功');
+        this.getData();  
         this.temp = {};       
       })
       //失敗結果
