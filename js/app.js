@@ -24,8 +24,8 @@ createApp({
           window.location = 'products.html';
         })
         //失敗結果
-        .catch((err) => {          
-          alert(err.data.message);
+        .catch((err) => {  
+          alert(err.response.data.message);
         });
       },
     },
